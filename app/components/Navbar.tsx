@@ -8,7 +8,6 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBacgkground, setNavBackground] = useState(false);
-  const [navTextColor, setNavtextColor] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
@@ -52,7 +51,7 @@ const Navbar = () => {
         }>
         <h3 className="text-2xl">LOGO</h3>
         <div>
-          <ul className="hidden md:flex justify-center">
+          <ul className="hidden md:flex justify-center items-center">
             <li className="ml-10 text-sm hover:text-green-500">
               <Link href="/">Tour Services</Link>
             </li>
@@ -62,12 +61,12 @@ const Navbar = () => {
             <li className="ml-10 text-sm hover:text-green-500">
               <Link href="/contact">Contact Us</Link>
             </li>
+            <button className="px-6 py-2 rounded-md bg-white text-green-600 border-none ml-4 hover:bg-green-500 hover:text-white hover:scale-105 duration-300 shadow-lg">Sign In</button>
           </ul>
           <div onClick={handleNav} className="md:hidden cursor-pointer">
             <AiOutlineMenu size={25} />
           </div>
         </div>
-        <button className="btn bg-white text-green-600 border-none ml-4">Sign In</button>
       </div>
 
       <div
@@ -86,20 +85,20 @@ const Navbar = () => {
             <h1 className="text-xl">Jude Lasundin</h1>
             <div
               onClick={handleNav}
-              className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+              className="rounded-full shadow-lg shadow-gray-400 bg-white p-3 cursor-pointer"
             >
               <AiOutlineClose />
             </div>
           </div>
-          <div className="py-4 flex flex-col items-center sm:items-start">
+          <div className="py-4 flex flex-col items-center sm:items-start text-white">
             <ul>
-              <li className="py-4 text-md hover:text-blue-500">
+              <li className="py-4 text-2xl hover:text-blue-500">
                 <Link onClick={()=> setNav(false)} href="/work">Work</Link>
               </li>
-              <li className="py-4 text-md hover:text-blue-500">
+              <li className="py-4 text-2xl hover:text-blue-500">
                 <Link onClick={()=> setNav(false)} href="/about">About</Link>
               </li>
-              <li className="py-4 text-md hover:text-blue-500">
+              <li className="py-4 text-2xl hover:text-blue-500">
                 <Link onClick={()=> setNav(false)} href="/contact">Contact</Link>
               </li>
             </ul>
